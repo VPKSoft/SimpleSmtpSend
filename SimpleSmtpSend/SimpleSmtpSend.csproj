@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>VPKSoft</Authors>
+    <Company>VPKSoft</Company>
+    <Description>A console application to send emails. The protected configuration is stored into a Json file.</Description>
+    <Copyright>VPKSoft</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>vpksoft_logo.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>SMTP send email</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <ApplicationIcon>VPKSoft.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Files\GitHub\SimpleSmtpSend\SimpleSmtpSend\SimpleSmtpSend.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Files\GitHub\SimpleSmtpSend\SimpleSmtpSend\SimpleSmtpSend.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="UnusedClasses\**" />
+    <EmbeddedResource Remove="UnusedClasses\**" />
+    <None Remove="UnusedClasses\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.0-preview1" />
+    <PackageReference Include="MailKit" Version="2.9.0" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="EmailBodyPipeLoremIpsum.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\..\Users\Petteri Kautonen\Pictures\VPKSoft\Icons\vpksoft_logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

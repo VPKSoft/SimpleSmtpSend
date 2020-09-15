@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleSmtpSend</name>
+    </assembly>
+    <members>
+        <member name="T:SimpleSmtpSend.Arguments">
+            <summary>
+            A class for the command line arguments.
+            </summary>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.SmtpPassword">
+            <summary>
+            Gets or sets the SMTP password.
+            </summary>
+            <value>The SMTP password.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.SmtpHost">
+            <summary>
+            Gets or sets the SMTP host.
+            </summary>
+            <value>The SMTP host.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.SmtpPort">
+            <summary>
+            Gets or sets the SMTP port.
+            </summary>
+            <value>The SMTP port.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.SmtpUserName">
+            <summary>
+            Gets or sets the name of the SMTP user.
+            </summary>
+            <value>The name of the SMTP user.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.SmtpLogin">
+            <summary>
+            Gets or sets the name of the SMTP user.
+            </summary>
+            <value>The name of the SMTP user.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.EmailAddress">
+            <summary>
+            Gets or sets the email address.
+            </summary>
+            <value>The email address.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.SettingsFile">
+            <summary>
+            Gets or sets the settings file.
+            </summary>
+            <value>The settings file.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.UseSsl">
+            <summary>
+            Gets or sets the settings file.
+            </summary>
+            <value>The settings file.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.MailTitle">
+            <summary>
+            Gets or sets the mail title.
+            </summary>
+            <value>The mail title.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.EmailBody">
+            <summary>
+            Gets or sets the email body.
+            </summary>
+            <value>The email body.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.ReceiverEmailAddress">
+            <summary>
+            Gets or sets the receiver email address.
+            </summary>
+            <value>The receiver email address.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.ReceiverName">
+            <summary>
+            Gets or sets the name of the receiver.
+            </summary>
+            <value>The name of the receiver.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.Verbose">
+            <summary>
+            Gets or sets the value indicating whether to show detailed debug information.
+            </summary>
+            <value>The value indicating whether to show detailed debug information.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.DisplayConfiguration">
+            <summary>
+            Gets or sets a value indicating whether display configuration to the user.
+            </summary>
+            <value><c>null</c> if display configuration to the user, <c>true</c> if [display configuration]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.Authenticate">
+            <summary>
+            Gets or sets a value indicating whether the SMTP mail send should authenticate with the server.
+            </summary>
+            <value><c>true</c> if the SMTP mail send should authenticate with the server; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Arguments.HideEncryptedData">
+            <summary>
+            Gets or sets a value indicating whether to hide encrypted data on output to console.
+            </summary>
+            <value><c>true</c> if [hide encrypted data]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:SimpleSmtpSend.Program.Main(System.String[])">
+            <summary>
+            Defines the entry point of the application.
+            </summary>
+            <param name="args">The arguments.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:SimpleSmtpSend.Program.ShowHelp">
+            <summary>
+            Displays the command line arguments for the software.
+            </summary>
+        </member>
+        <member name="M:SimpleSmtpSend.Program.CheckArguments(SimpleSmtpSend.Arguments)">
+            <summary>
+            Process the arguments given to the software.
+            </summary>
+            <param name="arguments">A class to hold the parsed arguments for the software.</param>
+        </member>
+        <member name="M:SimpleSmtpSend.Program.NotParsedArguments(System.Collections.Generic.IEnumerable{CommandLine.Error})">
+            <summary>
+            Process the argument errors occurred.
+            </summary>
+            <param name="errors">The collection of argument parsing errors.</param>
+        </member>
+        <member name="P:SimpleSmtpSend.Program.StandardInput">
+            <summary>
+            Gets the standard input (stdio) in case the input is redirected.
+            </summary>
+            <value>The standard input as a string in case the input is redirected; otherwise null.</value>        
+        </member>
+        <member name="M:SimpleSmtpSend.Program.ConcealString(System.String,System.Boolean,System.Char)">
+            <summary>
+            Conceal a string value with a specified <paramref name="concealChar"/> if the <paramref name="conceal"/> is set to true.
+            </summary>
+            <param name="value">The string value to conceal.</param>
+            <param name="conceal">A value indicating whether to return the original string or a new string concealed with repeating the specified character.</param>
+            <param name="concealChar">The character to use to conceal the string.</param>
+            <returns>A string length of <paramref name="value"/> concealed with the <paramref name="concealChar"/> if the <paramref name="conceal"/> is set to <c>true</c>; otherwise the original <paramref name="value"/> string.</returns>
+        </member>
+        <member name="P:SimpleSmtpSend.Program.SettingFileName">
+            <summary>
+            The setting file name (JSON).
+            </summary>
+            <value>The setting file name (JSON).</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Program.Settings">
+            <summary>
+            Gets or sets the settings for the software.
+            </summary>
+            <value>The settings for the software.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Program.MailToAddress">
+            <summary>
+            Gets or sets the mail to address to where the email should be sent.
+            </summary>
+            <value>The mail to address to where the email should be sent.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Program.MailToReceiverName">
+            <summary>
+            Gets or sets the name of the mail receiver.
+            </summary>
+            <value>The name of the mail receiver.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Program.EmailBody">
+            <summary>
+            Gets or sets the email body.
+            </summary>
+            <value>The email body.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Program.EmailSubject">
+            <summary>
+            Gets or sets the email subject.
+            </summary>
+            <value>The email subject.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Program.SettingsChanged">
+            <summary>
+            Gets or sets a value indicating whether any arguments were passed to the program which would change the settings Json file.
+            </summary>
+            <value><c>true</c> if any arguments were passed to the program which would change the settings Json file; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Program.Verbose">
+            <summary>
+            Gets or sets a value indicating whether to show detailed debug information in case of an error.
+            </summary>
+            <value><c>true</c> if to show detailed debug information in case of an error; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Program.DisplayConfiguration">
+            <summary>
+            Gets or sets a value indicating whether to display the software configuration to the user.
+            </summary>
+            <value><c>true</c> if to display the software configuration to the user; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:SimpleSmtpSend.ProtectDataCore">
+            <summary>
+            A class to store string data using <see cref="T:Microsoft.AspNetCore.DataProtection.IDataProtector"/> interface.
+            </summary>
+        </member>
+        <member name="M:SimpleSmtpSend.ProtectDataCore.CreateInstance">
+            <summary>
+            Creates the instance of the <see cref="T:SimpleSmtpSend.ProtectDataCore"/> class.
+            </summary>
+            <returns>An instance to the <see cref="T:SimpleSmtpSend.ProtectDataCore"/> class.</returns>
+        </member>
+        <member name="P:SimpleSmtpSend.ProtectDataCore.Protector">
+            <summary>
+            Gets or sets the instance implementing the <see cref="T:Microsoft.AspNetCore.DataProtection.IDataProtector"/> interface.
+            </summary>
+            <value>The instance implementing the <see cref="T:Microsoft.AspNetCore.DataProtection.IDataProtector"/> interface.</value>
+        </member>
+        <member name="M:SimpleSmtpSend.ProtectDataCore.#ctor(Microsoft.AspNetCore.DataProtection.IDataProtectionProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SimpleSmtpSend.ProtectDataCore"/> class.
+            </summary>
+            <param name="provider">The provider, which is provided by the DI (Dependency Injection) in the <see cref="M:SimpleSmtpSend.ProtectDataCore.CreateInstance"/> method.</param>
+        </member>
+        <member name="M:SimpleSmtpSend.ProtectDataCore.Protect(System.String)">
+            <summary>
+            Cryptographically protects a piece of plain text data.
+            </summary>
+            <param name="value">The plain text data to protect.</param>
+            <returns>A protected form of the plain text data in base-64 encoded format.</returns>
+        </member>
+        <member name="M:SimpleSmtpSend.ProtectDataCore.Unprotect(System.String)">
+            <summary>
+            Cryptographically unprotects a piece of protected data in base-64 encoded format.
+            </summary>
+            <param name="base64Value">The protected data to unprotect.</param>
+            <returns>The plain text form of the protected data.</returns>
+        </member>
+        <member name="T:SimpleSmtpSend.Settings">
+            <summary>
+            Settings for the application.
+            </summary>
+        </member>
+        <member name="M:SimpleSmtpSend.Settings.FromJson(System.String)">
+            <summary>
+            Reads the settings from a specified Json file name.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <returns>The Json file deserialized as a new <see cref="T:SimpleSmtpSend.Settings"/> class instance.</returns>
+        </member>
+        <member name="M:SimpleSmtpSend.Settings.ToJson(SimpleSmtpSend.Settings,System.String)">
+            <summary>
+            Serializes the specified <see cref="T:SimpleSmtpSend.Settings"/> class instance to a Json and saves the data to the specified file.
+            </summary>
+            <param name="settings">The <see cref="T:SimpleSmtpSend.Settings"/> class instance.</param>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="M:SimpleSmtpSend.Settings.ToJson(System.String)">
+            <summary>
+            Converts to Json.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+        </member>
+        <member name="F:SimpleSmtpSend.Settings._protectData">
+            <summary>
+            The field for the <see cref="P:SimpleSmtpSend.Settings.ProtectData"/> property.
+            </summary>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.ProtectData">
+            <summary>
+            Gets the data protection class instance.
+            </summary>
+            <value>The data protection class instance.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.SmtpPort">
+            <summary>
+            Gets or sets the SMTP port.
+            </summary>
+            <value>The SMTP port.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.SmtpHost">
+            <summary>
+            Gets or sets the SMTP host.
+            </summary>
+            <value>The SMTP host.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.SmtpUser">
+            <summary>
+            Gets or sets the SMTP user.
+            </summary>
+            <value>The SMTP user.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.SmtpPassword">
+            <summary>
+            Gets or sets the SMTP password.
+            </summary>
+            <value>The SMTP password.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.EmailSenderName">
+            <summary>
+            Gets or sets the name of the email sender.
+            </summary>
+            <value>The name of the email sender.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.EmailAddress">
+            <summary>
+            Gets or sets the email address.
+            </summary>
+            <value>The email address.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.UseSsl">
+            <summary>
+            Gets or sets the value whether to use SSL for the SMTP connection.
+            </summary>
+            <value>The value whether to use SSL for the SMTP connection.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.SmtpAuthenticate">
+            <summary>
+            Gets or sets a value indicating whether to authenticate with the SMTP server.
+            </summary>
+            <value><c>true</c> if to authenticate with the SMTP server; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.EncryptOutput">
+            <summary>
+            Gets or sets the value whether the protected data should be returned as encrypted from the class properties.
+            </summary>
+            <value>The value whether the protected data should be returned as encrypted from the class properties.</value>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.EncryptInput">
+            <summary>
+            Gets or sets the value whether the protected data should be encrypted when assigning the class property values.
+            </summary>
+            <value>The value whether the protected data should be encrypted when assigning the class property values.</value>
+        </member>
+        <member name="M:SimpleSmtpSend.Settings.SetProtectedValue(System.String,System.String)">
+            <summary>
+            Sets the protected property value.
+            </summary>
+            <param name="valueName">Name of the value.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:SimpleSmtpSend.Settings.GetProtectedValue(System.String)">
+            <summary>
+            Gets the protected property value.
+            </summary>
+            <param name="valueName">Name of the value.</param>
+            <returns>The property value of a given property name either in encrypted format or as plain text depending on the <see cref="P:SimpleSmtpSend.Settings.EncryptOutput"/> property value.</returns>
+        </member>
+        <member name="P:SimpleSmtpSend.Settings.ProtectedValues">
+            <summary>
+            Gets the protected data values.
+            </summary>
+            <value>The protected data values.</value>
+        </member>
+    </members>
+</doc>

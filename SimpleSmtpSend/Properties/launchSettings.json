@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SimpleSmtpSend": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Files\\GitHub\\SimpleSmtpSend\\SimpleSmtpSend\\bin\\Debug\\netcoreapp3.1"
+    }
+  }
+}
